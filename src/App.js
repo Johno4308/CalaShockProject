@@ -16,7 +16,7 @@ export function App() {
 
   // if (error) return <p>An error occurred</p>;
 
-  // console.log(products);
+  // console.log(products)
   const { products } = useProducts();
   return (
     <div>
