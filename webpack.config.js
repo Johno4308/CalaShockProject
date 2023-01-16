@@ -1,4 +1,6 @@
 const path = require("path");
+//miniCss is a plugin to seperate the styling from the .js file in the bundle
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   //output location of webpack bundle - file called index.bundle.js
@@ -27,8 +29,9 @@ module.exports = {
         //to handle sass files
         //RegEx for SASS
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },
+  plugins: [new MiniCssExtractPlugin()],
 };
