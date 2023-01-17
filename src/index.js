@@ -5,6 +5,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { App } from "./App";
 import "./App.scss";
+import "bootstrap";
 
 const appElement = document.getElementById("app");
 
